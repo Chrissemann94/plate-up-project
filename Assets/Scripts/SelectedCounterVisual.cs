@@ -7,7 +7,7 @@ public class SelectedCounterVisual : MonoBehaviour
     [SerializeField] private GameObject visualGameObject;
 
 
-    private void Start()  // Don't use Awake so this function is called after setting the instance. ScriptExecutionOrder is not necessary
+    private void Start()  // Don't use Awake so this function is called after setting the instance. Edit > Project Settings > ScriptExecutionOrder is not necessary
     {
         Player.Instance.OnSelectedCounterChanged += Player_OnSelectedCounterChanged;
     }
@@ -32,6 +32,6 @@ public class SelectedCounterVisual : MonoBehaviour
 
     private void Hide()
     {
-        visualGameObject?.SetActive(false);
+        visualGameObject.SetActive(false);
     }
 }
